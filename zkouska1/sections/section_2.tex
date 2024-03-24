@@ -1,0 +1,71 @@
+\begin{center}
+    To find the inflection points we need the second derivative
+    $$ f'' \coloneq \frac{d^{2}f}{dx^{2}} $$
+    and solve for
+    $$ f''(x) = 0 $$
+\end{center}
+
+Take the second derivative of function $f$.
+
+\begin{align}
+    f'(x) &= \left( 2x^{3} + \frac{3}{2}\ln{x} \right)' \\
+    &= 6x^{2} + \frac{3}{2}\frac{1}{x} \\
+    &= 6x^{2} + \frac{3}{2x} \\
+    f''(x) &= \left( 6x^{2} + \frac{3}{2x} \right)' \\
+    &= 12x + \frac{2x(3)' - 3(2x)'}{(2x)^{2}} \\
+    &= 12x - \frac{6}{4x^{2}} \\
+    &= 12x - \frac{3}{2x^{2}}
+\end{align}
+
+Solve for $f''(x) = 0$.
+
+\begin{align}
+    12x - \frac{3}{2x^{2}} &= 0\ /\ \cdot x^{2}  \\
+    12x^{3} - \frac{3}{2} &= 0 \\
+    24x^{3} &= 3 \\
+    x^{3} &= \frac{1}{8} \\
+    x_{1} &= \frac{1}{2} 
+\end{align}
+
+The inflection point of the function $f$ 
+is $x_{1}$, where $x_{1} = \frac{1}{2}$.
+
+\pagebreak
+\begin{center}
+    \textit{The funciton $f$ and its first $f'$ 
+    and second derivative $f''$}
+    
+    \vspace{1cm}
+
+    \begin{tikzpicture}[scale=1.5]
+        \begin{axis}[
+            axis lines=middle,
+            samples=500,
+            restrict x to domain=-4:4,
+            restrict y to domain=-10:10,
+            xlabel=$x$,
+            ylabel=$y$,
+            xmin=-3.5,
+            xmax=3.5,
+            ymin=-4.5,
+            ymax=10.5,
+            xmajorgrids=true,
+            ymajorgrids=true,
+            ]
+            \foreach \COLOR/\EXPR/\LABEL/\POS/\LR in { 
+                Green / { (2*(x^3)) + ((3/2)*ln(x)) } / $f(x)$  / 0.8 / right, 
+                Blue  / { 6*(x^2) + (2 / (2*x)) } / $f'(x)$ / 0.0 / left,
+                Red  / { (12*x) - (3 / (2*(x^2))) } / $f''(x)$ / 0.4 / right
+            } 
+            {\edef\temp{
+                \noexpand\addplot[line width=2pt,color=\COLOR]{\EXPR}
+                node[\LR,pos=\POS]{\LABEL};
+            }\temp}
+            \node (source) at (axis cs:2,2){$x_1 = \frac{1}{2}$};
+            \node (destination) at (axis cs:1/2,0){\textbullet};
+            \draw[line width=1.2pt, ->, shorten >=-5pt, shorten <=-3pt]
+            (source)--(destination);
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+

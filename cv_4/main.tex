@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\input{inputs/preamble}
+\input{inputs/macros}
+\includeonly{
+    sections/section_1.tex,
+    sections/section_2.tex,
+    sections/section_3.tex,
+    sections/section_4.tex,
+    sections/section_5.tex,
+    sections/section_6.tex,
+    sections/section_7.tex,
+    sections/section_8.tex,
+    sections/section_9.tex,
+    sections/section_10.tex,
+    sections/section_11.tex,
+    sections/section_12.tex,
+    sections/section_13.tex,
+    sections/section_14.tex,
+    sections/section_15.tex,
+    sections/section_16.tex,
+    sections/section_17.tex,
+    sections/section_18.tex
+}
+
+\title{\Huge{\textbf{Matematická analýza 1 - cvičení 4}} \\ 
+\huge{Limita, posloupnosti, faktoriál, \\ metoda dvou policajtů}}
+\author{Phat Tran}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\setcounter{page}{0}
+\clearpage
+
+\pagestyle{mycustomstyle} 
+
+\section{Limita funkce}
+
+\defi{Chování limita exponenciální funkce $f(q) \coloneq q^n$.}{
+    \begin{align*}
+        \lim q^n 
+        \begin{cases}
+            +\infty, & \text{if}\ q > 1 \\
+            1, & \text{if}\ q = 1 \\
+            0, & \text{if}\ q = 0 \\
+            0, & \text{if}\ |q| < 1 \\
+            \text{DNF}, & \text{if}\ q \le -1  
+        \end{cases} \\         
+    \end{align*}    
+}
+    
+\foreach \s in {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18} {
+    \def\temp{ 
+        \expandafter\input{sections/section_\s.tex}
+    }\temp
+}
+
+\end{document}
+

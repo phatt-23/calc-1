@@ -1,0 +1,99 @@
+Rules for the integral of $\arctan$ and the summation.
+
+\begin{align*}
+    \arctan{x} &\coloneq \tan^{-1}{x} = \frac{1}{\tan{x}} 
+    = \frac{1}{\frac{\sin{x}}{\cos{x}}} \\
+    (\arctan{x})' &= \frac{1}{x^{2} + 1} \\
+    \int \frac{1}{x^{2} + 1} \diff{x} &= \arctan{x} + C \\
+    \int \sum_{i = 1}^{n} t_{i} \diff{x} 
+    &= \int t_{1} \diff{x}
+    + \int t_{2} \diff{x}
+    + \ldots 
+    + \int t_{n} \diff{x} \\
+\end{align*}
+
+\begin{align}
+    &\int \left( 2x^{6} - \frac{3x^{2}}{\sqrt[3]{x}} 
+    - 7\sin{x} + \frac{2}{x^{2} + 1} + \frac{11}{x} \right) \diff{x} \\
+    &= \int 2x^{6} \diff{x} 
+    - \int \frac{3x^{2}}{\sqrt[3]{x}} \diff{x}
+    - \int 7\sin{(x)} \diff{x}
+    + \int \frac{2}{x^{2} + 1} \diff{x}
+    + \int \frac{11}{x} \diff{x} \\  
+    &= 2\int x^{6} \diff{x} 
+    - 3\int \frac{x^{2}}{x^{\frac{1}{3}}} \diff{x}
+    - 7\int \sin{(x)} \diff{x}
+    + 2\int \frac{1}{x^{2} + 1} \diff{x}
+    + 11\int \frac{1}{x} \diff{x} \\
+    &= 2 \frac{x^{7}}{7} 
+    - 3\int x^{\frac{5}{3}} \diff{x}
+    + 7\cos{(x)} 
+    + 2\arctan{x}
+    + 11\ln{|x|} \\
+    &= \frac{2x^{7}}{7} 
+    - 3\frac{x^{\frac{8}{3}}}{\frac{8}{3}}
+    + 7\cos{(x)} 
+    + 2\arctan{x}
+    + 11\ln{|x|} \\
+    &= \frac{2x^{7}}{7} 
+    - 3\frac{3x^{\frac{8}{3}}}{8}
+    + 7\cos{(x)} 
+    + 2\arctan{x}
+    + 11\ln{|x|} \\
+    &= \frac{2x^{7}}{7} 
+    - \frac{9x^{\frac{8}{3}}}{8}
+    + 7\cos{(x)} 
+    + 2\arctan{x}
+    + 11\ln{|x|}
+\end{align}
+
+The result is
+$$
+    \int \left( 2x^{6} - \frac{3x^{2}}{\sqrt[3]{x}} 
+    - 7\sin{x} + \frac{2}{x^{2} + 1} + \frac{11}{x} \right) \diff{x}
+    = \frac{2x^{7}}{7} 
+    - \frac{9x^{\frac{8}{3}}}{8}
+    + 7\cos{(x)} 
+    + 2\arctan{x}
+    + 11\ln{|x|} + C
+$$
+
+\pagebreak
+
+\begin{center}
+\textit{The graph of the function $f(x)$ and its integral $F(x)$}
+\begin{align*} 
+    f(x) &= 2x^{6} - \frac{3x^{2}}{\sqrt[3]{x}} 
+    - 7\sin{x} + \frac{2}{x^{2} + 1} + \frac{11}{x} \\
+    F(x) &= \frac{2x^{7}}{7} - \frac{9x^{\frac{8}{3}}}{8}
+    + 7\cos{(x)} + 2\arctan{x} + 11\ln{|x|} + C
+\end{align*}
+
+\begin{tikzpicture}[scale=1.5]
+    \begin{axis}[
+        axis lines=middle,
+        restrict y to domain=-60:60,
+        restrict x to domain=-2.5:2.5,
+        xlabel=$x$,
+        ylabel=$y$,
+        xmin=-2.5,        % Remember to adjust the dimensions
+        xmax=2.5,
+        ymin=-50.5,
+        ymax=50.5,
+        xmajorgrids=true,
+        ymajorgrids=true,
+        raw gnuplot,
+    ]
+    \foreach \COLOR/\PATH/\LR/\POS/\LABEL in {
+        Green /{tables/table_2/plot_data1_neg.txt}/ right / 0.3 / {$f(x)$},
+        Green /{tables/table_2/plot_data1_pos.txt}/ right / 0.0 / {$$},
+        Red /{tables/table_2/plot_data2.txt}/ right / 0.7 / {$F(x)$}
+    }{\edef\temp{
+            \noexpand\addplot[line width=2pt, color=\COLOR] 
+            table[x index=0, y index=1]{\PATH}
+            node[\LR,pos=\POS]{\LABEL};
+    }\temp}
+    \end{axis}
+\end{tikzpicture}  
+\end{center}
+

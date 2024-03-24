@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\input{inputs/preamble}
+\input{inputs/macros}
+\includeonly{
+    sections/section_1,
+    sections/section_2,
+    sections/section_3,
+    sections/section_4,
+    sections/section_5,
+    sections/section_6,
+    sections/section_7
+}
+
+\title{\Huge{\textbf{Matematická analýza 1}} \\ \huge{Zkouškové a zápočtové písemky}}
+\author{Phat Tran}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{mycustomstyle}
+\setcounter{page}{0}
+\clearpage
+
+\section{Zkoušková písemka z MA1 - varianta B}
+    \subsection{\textnormal{Najděte lokální extrémy funkce}}
+    \begin{tcolorbox}
+        $$ \bm{ f(x) \coloneq (5 - 2x)x^{3} } . $$
+    \end{tcolorbox}
+        \input{sections/section_1}
+        \clearpage
+
+    \subsection{\textnormal{Najděte inflexní body funkce}}
+    \begin{tcolorbox}
+        $$ \bm{ f(x) \coloneq 2x^{3} + \frac{3}{2}\ln{x} } . $$
+    \end{tcolorbox}
+        \input{sections/section_2}
+        \clearpage
+
+    \subsection{\textnormal{Najděte asymptotu v $-\infty$ funkce}}
+    \begin{tcolorbox}
+        $$ \bm{ f(x) \coloneq x + 5 + \frac{3}{2x + 1} } . $$
+    \end{tcolorbox}
+        \input{sections/section_3}
+        \clearpage
+
+    \subsection{\textnormal{Vypočtěte limitu}}
+    \begin{tcolorbox}
+        $$ \bm{ \lim_{x \rightarrow 0} 
+        \frac{x^{2019} + \sin{(2019x)}}{e^{2019x} - x - 1} } . $$ 
+    \end{tcolorbox}
+        \input{sections/section_4}    
+        \clearpage
+
+    \subsection{\textnormal{
+        Určete Taylorův polynom 2. řádu 
+        funkce $f$ se středem v bodě $x_{0}$, je-li
+    }}
+    \begin{tcolorbox}
+        $$ \bm{f(x) = \sin{x} - \cos{x}, \textnormal{\hspace*{0.5cm}} x_{0} = 0} . $$
+    \end{tcolorbox}
+        \input{sections/section_5}
+        \pagebreak
+
+    \subsection{\textnormal{Vypočtěte integrál}}
+    \begin{tcolorbox}
+        $$ \bm{\int \left( 2x^{6} - \frac{3x^{2}}{\sqrt[3]{x}} 
+        - 7\sin{x} + \frac{2}{x^{2} + 1} + \frac{11}{x} \right) \diff{x} }. $$
+    \end{tcolorbox}
+        \input{sections/section_6}
+        \pagebreak
+
+    \subsection{\textnormal{
+        Rozhodněte, která z následujících 
+        tvrzení jsou pravdivá či nepravdivá.
+    }}
+    \begin{enumerate}[
+        label=(\alph*), 
+        noitemsep,
+        topsep=0pt,
+        parsep=2pt,
+        partopsep=0pt,
+        labelwidth=5cm,
+        align=right,
+        itemindent=1.2cm
+    ]
+        \item Je-li funkce $f$ spojitá v intervalu $I = \left<0,1\right>$, pak $f$ musí být na $I$ omezená.
+        \item Je-li $f'(5) = 0$, má funkce $f$ v bodě 5 lokální extrém.
+        \item Funkce mající nekonečnou derivaci v $x_{0}$ může být v bodě $x_{0}$ spojitá.
+        \item Na intervalu $(0, +\infty)$ platí $\int \frac{1}{2x}dx = ln(2x)$.
+        \item Existuje omezená funkce, která má asymptotu.
+    \end{enumerate}
+    
+    \input{sections/section_7}
+
+\end{document}

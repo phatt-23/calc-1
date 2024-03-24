@@ -1,0 +1,22 @@
+\qs{Vypočtěte limitu}{
+    $$ \lim_{\ntoinf} \frac{\sqrt{n^3} - n + 3}{2n - \sqrt{n}} $$
+}
+
+\begin{align}
+    \lim_{\ntoinf}& \frac{n^{\frac{3}{2}} - n + 3}{2n - n^{\frac{1}{2}}} \\
+    \lim_{\ntoinf}& \frac{n^{\frac{3}{2}} - n + 3}{2n - n^{\frac{1}{2}}} 
+    \times \frac{2n + n^{\frac{1}{2}}}{2n + n^{\frac{1}{2}}}  \\
+    \lim_{\ntoinf}& \frac{(n^{\frac{3}{2}} - n + 3)(2n + n^{\frac{1}{2}})}{(2n - n^{\frac{1}{2}})(2n + n^{\frac{1}{2}})} \\
+    \lim_{\ntoinf}& 
+    \frac{ 2n^{\frac{5}{2}} - 2n^2 + 6n + n^2 - n^{\frac{3}{2}} + 3n^{\frac{1}{2}} }
+    { 4n^2 - 2n^{\frac{3}{2}} + 2n^{\frac{3}{2}} - n } \\
+    \lim_{\ntoinf}&
+    \frac{ 2n^{\frac{5}{2}} - n^2 - n^{\frac{3}{2}} + 6n + 3n^{\frac{1}{2}} }
+    { 4n^2 - n } \\
+    \lim_{\ntoinf}&\frac{ 2n^{\frac{5}{2}} }{ 4n^2 } 
+    = \frac{ n^{\frac{5}{2}} }{ 2n^2 } 
+    = \frac{ n^{\frac{5}{2}} }{ 2n^2 } \div \frac{n^2}{n^2} 
+    = \frac{n^{\frac{1}{2}}}{2} = \infty \\
+\end{align}
+
+\pagebreak

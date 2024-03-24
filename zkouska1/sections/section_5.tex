@@ -1,0 +1,80 @@
+To determine Taylor's polynom of \nth{2} degree, $P^{2}$, we need
+the \nth{1}, $f' = \frac{d}{dx}f$, and \nth{2} derivative, 
+$f'' = \frac{d^2}{dx^2}f$, of function~$f(x)$. Then 
+get the result of $f(0), f'(0), f''(0)$ and match 
+with the modifiable values of our polynom $P^{2}$.
+
+\begin{center}
+    \textit{Taylor's polynom is defined as such} 
+\end{center}
+\begin{align*}
+    P_{T}^{n}(x) \coloneq \sum_{i = 0}^{n} a_{i}x^{i} 
+    = a_{0}x^{0} + a_{1}x^{1} + \ldots + a_{n}x^{n}
+\end{align*}
+
+\begin{align}
+    f(x) &= \sin{x} - \cos{x} \\
+    f'(x) &= \left( \sin{x} - \cos{x} \right)' 
+    = \cos{x} + \sin{x} \\
+    f''(x) &= \left( \cos{x} + \sin{x} \right)'
+    = -\sin{x} + \cos{x} \\
+    f(0) &= \sin{0} - \cos{0} = 0 - 1 = -1 \\
+    f'(0) &= \cos{0} + \sin{0} = 1 + 0 = 1 \\
+    f''(0) &= -\sin{0} + \cos{0} = 0 + 1 = 1 \\
+    P_{T}^{2}(x) &= \sum_{i = 0}^{2} a_{i}x^{i} 
+    = a_{0}x^{0} + a_{1}x^{1} + a_{2}x^{2} \\ 
+    \frac{d}{dx}P_{T}^{2}(x) &= a_{1} + 2a_{2}x \\
+    \frac{d^{2}}{dx^{2}}P_{T}^{2}(x) &= 2a_{2}
+\end{align}
+
+We can get the correct values for $a_{0} \ldots a_{n}$
+by solving for $\frac{d^{n}}{dx^{n}}P_{T}^{n} = \frac{d^{n}}{dx^{n}}f$, 
+meaning that 
+    $$P(x) = f(x),\ P'(x) = f'(x),\ P''(x) = f''(x).$$
+
+\begin{align}
+    P(x) &= a_{0}x^{0} + a_{1}x^{1} + a_{2}x^{2} \\
+    f(0) &= -1 \rightarrow\ a_{0} = \frac{-1}{0!} = -1 \\
+    f'(0) &= 1 \rightarrow\ a_{1} = \frac{1}{1!} = 1 \\
+    f''(0) &= 1 \rightarrow\ a_{2} = \frac{1}{2!} = \frac{1}{2}
+\end{align}
+
+What we get is
+$$ P_{T}^{2} = -1x^{0} + 1x^{1} + \frac{1}{2}x^{2}. $$
+
+\pagebreak
+
+\begin{center}
+    \textit{The graph of the function $f(x)$ 
+    and the Taylor's polynom $P_{T}^{2}$}
+
+    \vspace{1cm}
+    
+\begin{tikzpicture}[scale=1.5]
+    \begin{axis}[
+        axis lines=middle,
+        samples=500,
+        restrict x to domain=-10:10,
+        restrict y to domain=-10:10,
+        xlabel=$x$,
+        ylabel=$y$,
+        xmin=-6.5,
+        xmax=6.5,
+        ymin=-1.7,
+        ymax=1.7,
+        xmajorgrids=true,
+        ymajorgrids=true,
+        xtick={-2*pi, -1*pi, 1*pi, 2*pi},
+        xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+    ]
+    \foreach \COLOR/\EXPR/\LABEL/\POS/\LR in { 
+        Green /{sin(deg(x)) - cos(deg(x))}/ $f(x)$ / 0.35 / right,
+        Blue /{-1 + 1*x + (1/2)*(x^2)}/ $P_{T}^{2}$ / 0.6 / right
+    } 
+    {\edef\temp{
+        \noexpand\addplot[line width=2pt,color=\COLOR,domain=-10:10]{\EXPR}
+        node[\LR,pos=\POS]{\LABEL};
+    }\temp} 
+    \end{axis}
+\end{tikzpicture}
+\end{center}

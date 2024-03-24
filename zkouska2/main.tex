@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+
+\input{inputs/preamble}
+\input{inputs/macros}
+\includeonly{
+    sections/section_1.tex,
+    sections/section_2.tex,
+    sections/section_3.tex,
+    sections/section_4.tex,
+    sections/section_5.tex,
+    sections/section_6.tex,
+    sections/section_7.tex
+}
+
+
+\title{\Huge{\textbf{Matematická analýza 1}} \\ \huge{Zkoušková písemka - varianta B}}
+\author{Phat Tran}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\setcounter{page}{0}
+\newpage
+
+\section{}
+
+    \subsection{}
+    \begin{tcolorbox}
+        Najděte intervaly ryzí monotonie funkce
+        $$ f(x) \coloneq x^2 - 3x +\ln{x} . $$
+    \end{tcolorbox}
+    \input{sections/section_1.tex}
+    \pagebreak
+    
+    \subsection{}
+    \begin{tcolorbox}
+        Najděte inflexní body funkce
+        $$ f(x) \coloneq 3x^5 - 10x^4 + 10x^3 + 7x - 9 . $$
+    \end{tcolorbox}
+    \input{sections/section_2.tex}
+    \pagebreak
+
+    \subsection{}
+    \begin{tcolorbox}
+        Vypočtěte limitu
+        $$ \lim_{x \rightarrow 0} \frac{\ln{(1 + x)} - x}{x\sin{x}} . $$
+    \end{tcolorbox}
+    \input{sections/section_3.tex}
+    \pagebreak
+
+    \subsection{}
+    \begin{tcolorbox}
+        Určete Taylorův polynom 2. řádu funkce $f$ se středem v bodě $x_0$, je-li
+        $$ f(x) \coloneq \sin{x} + \cos{x} + \tan{x},\ x_0 = 0 . $$
+    \end{tcolorbox}
+    \input{sections/section_4.tex}
+    \pagebreak
+
+    \subsection{}
+    \begin{tcolorbox}
+        Vypočtěte
+        $$ \int (2x + 3)e^x \diff{x} . $$
+    \end{tcolorbox}
+    \input{sections/section_5.tex}
+    \pagebreak
+
+    \subsection{}
+    \begin{tcolorbox}
+        Vypočtěte
+        $$ \int_{0}^{\frac{\pi}{2}} \sin^3{x}\cos^2{x} \diff{x} . $$
+    \end{tcolorbox}
+    \input{sections/section_6.tex}
+    \pagebreak
+
+    \subsection{}
+    \begin{tcolorbox}
+        finish
+    \end{tcolorbox}
+
+\end{document}

@@ -1,0 +1,141 @@
+To find local extrema we need to solve for $f'(x) = 0$.
+    
+        \begin{align}
+        f'(x) &= \left( (5-2x)x^{3} \right)' \\
+        &= (5-2x)'x^{3} + (5-2x)(x^{3})' \\
+        &= (-2)x^{3} + (5-2x)(3x^{2}) \\
+        &= -2x^{3} + 15x^{2} - 6x^{3} \\
+        &= 15x^{2} - 8x^{3} \\
+        &= x^{2}(15 - 8x)
+        \end{align}
+
+        Now find $x_{1} \ldots x_{n}$ that 
+        satisfy this statement $x^{2}(15 - 4x) = 0$.
+
+        $$ x^{2}(15 - 8x) = 0 $$
+        $$ (x^{2} = 0) \vee (15 - 8x = 0) 
+        \Rightarrow (x^{2}(15 - 8x) = 0) $$
+        % \setlength{\jot}{8pt}% tweak
+        \begin{align}
+            x^{2} &= 0 \\
+            x_{1} &= 0 \\[10pt]
+            15 - 8x &= 0 \\
+            8x &= 15 \\
+            x_{2} &= \frac{15}{8}
+        \end{align}
+        
+        Now that we extracted the extrema we need to 
+        decide for each wheter it is a~minimum or a~maximum.
+        To do that we can use a~number line that is segmented
+        by the points $x_{1}$ and $x_{2}$, and find out if 
+        the function $f'(x)$ is positive or negative at each
+        interval. That will helps understand how the function 
+        behaves.    
+
+        \vspace{10pt}
+
+        \begin{center}
+             \begin{tikzpicture}[scale=2.0]
+                \draw[latex-latex] (-2.5,0)--(4.5,0);
+                \foreach \x in {-2,-1,0,1,2,3,4}
+                    \draw[shift={(\x,0)},color=white] (0pt,0pt)--(0pt,-4pt) 
+                    node[right,color=black]{$\x$};
+                \draw[color=white] (15/8,0)--(15/8,-2pt)
+                    node[below,color=black]{$\frac{15}{8}$};
+                \foreach \x in {-2,-1,0,1,15/8,2,3,4}
+                    \draw[shift={(\x,0)},color=black] (0pt,2pt)--(0pt,-2pt);
+                \foreach \x in {0,15/8}
+                    \draw[shift={(\x,0)},color=black] (0,10pt)--(0,0);
+                \path[draw=black,fill=white] (0,10pt) circle(5pt) node[]{$x_{1}$};
+                \path[draw=black,fill=white] (15/8,10pt) circle(5pt) node[]{$x_{2}$};
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{center}
+            For the interval $(-\infty, 0)$ we will pick $-1$ as our
+            input to the function $f(x)$.
+            \begin{align*}
+                f'(x) &= (15 - 8x)x^{2} \\
+                f'(-1) &= (15 - 8(-1))(-1)^{2} \\
+                &= (15 + 8)1 
+                = 24?
+            \end{align*}
+            We got $24$ which is positive so the function $f'(x)$ in 
+            the interval $(-\infty, 0)$ is negative.
+
+            \clearpage
+
+            For the interval $(0, \frac{15}{8})$ we will pick $1$.
+            \begin{align*}
+                f'(x) &= (15 - 8x)x^{2} \\
+                f'(1) &= (15 - 2(1))1^{2} 
+                = 7
+            \end{align*}
+            The function $f'$ in $(0, \frac{15}{8})$ is positive.
+        
+            \vspace{0.5cm}
+
+            For the interval $(\frac{15}{8}, +\infty)$ we choose $2$.
+            \begin{align*}
+                f(x) &= (15 - 8x)x^{2} \\
+                f(2) &= (15 - 8(2))2^{2} 
+                = -2
+            \end{align*}
+            The function $f'$ is negative in $(\frac{15}{8}, +\infty)$.
+        \end{center}
+
+        Now that we evaluated all the intervals 
+        let's put all of our findings into a separate table.
+        
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                & $(-\infty, 0)$ & $(0, \frac{15}{8})$ & $(\frac{15}{8}, +\infty)$ \\ \hline
+                $f'(x)$ & $+$ & $+$ & $-$ \\ \hline
+            \end{tabular}
+        \end{center}
+        
+        This tells us that our $x_{1}$ isn't a~local extremum because
+        the intervals at either side are positive, theyx don't
+        switch signs. This implies that $f'$ is decreasing, 
+        touching zero and then increasing, but never switches signs.
+        The $x_{2}$ on the other hand is a~local extermum, a maximum, becuase 
+        the interval on left is positive and negative on the right 
+        implying $f'$~is dropping down, touching zero and descreasing 
+        further. The sign switch from positive to negative as they cross
+        $x = \frac{15}{8}$.
+        \clearpage
+
+        \begin{center}
+            \textit{The function $f$ and its fisrt derivative $f'$}
+        \end{center}
+        \begin{align*}
+            f(x) &\coloneq (5 - 2x)x^{3} \\
+            f'(x) &\coloneq (15 - 8x)x^{2}
+        \end{align*}
+        \begin{center}
+            \begin{tikzpicture}[scale=1.5]
+                \begin{axis}[
+                    axis lines=middle,samples=500,
+                    restrict x to domain=-4:4,
+                    restrict y to domain=-10:10,
+                    xlabel=$x$,ylabel=$y$,
+                    xmin=-3.5,xmax=3.5,
+                    ymin=-4.5,ymax=10.5,
+                    xmajorgrids=true,
+                    ymajorgrids=true,
+                ]
+                \foreach \COLOR/\EXPR/\LABEL/\POS/\LR in { 
+                    Green / { (5-(2*x))*(x^3) } / $f(x)$  / 0.6 / right, 
+                    Blue  / { (15-8*x)*x^2 }    / $f'(x)$ / 0.1 / left
+                } 
+                {
+                    \edef\temp{
+                        \noexpand\addplot[line width=2pt,color=\COLOR]{\EXPR}
+                        node[\LR,pos=\POS]{\LABEL};
+                    }
+                    \temp
+                } 
+                \end{axis}
+            \end{tikzpicture}
+        \end{center}

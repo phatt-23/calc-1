@@ -1,0 +1,74 @@
+Get the first and second derivative of function $f$.
+
+The chain rule:
+\begin{center}
+    Let $f : U \subseteq \mathbb{R} \mapsto \mathbb{R}$ and 
+    $g : U \subseteq \mathbb{R} \mapsto \mathbb{R}$, then
+    \begin{align*}
+        \left(\ f(g(x))\ \right)' &= f'(g(x)) \cdot g'(x) \\
+        (f \circ g)'(x) &= f'(g(x)) \cdot g'(x) \\
+    \end{align*}
+\end{center}
+\begin{lstlisting}
+    f :: R -> R                                 -- R could also be R -> R 
+    g :: R -> R                                 -- ' equals derivative
+    f $ g x = ( f' $ g x ) * g' x               
+    -- or
+    f (g x) = f'(g x) * g' x               
+\end{lstlisting} 
+
+The behaviour of secant function:
+\begin{align*}
+    \sec^2{x} &= (\sec{x})^2 \\
+    \left( \sec^2{x} \right)' &= \left( (\sec{x})^2 \right)' \\
+    2\sec^{2 - 1}{x} \cdot \left( \sec{x} \right)'
+    &= 2\sec{x} \left( \frac{1}{\cos{x}} \right)' \\
+    2\sec{x} \frac{\sin{x}}{\cos^2{x}}
+    &= 2\sec{x} \frac{\sin{x}}{\cos{x}} \frac{1}{\cos{x}} \\
+    2\sec{x} \tan{x} \sec{x}
+    &= 2\sec^2{x} \tan{x} \\
+\end{align*}
+
+Taylor's polynom of second degree.
+$$ P^2_T \coloneq c_0 + c_1 x + c_2 x^2 $$
+\begin{align*}
+    P^2_T &= c_0 + c_1 x + c_2 x^2 \\
+    \frac{d}{dx} P^{2}_T &= c_1 + 2 c_2 x \\
+    \frac{d^2}{dx^2} P^{2}_T &= 2 c_2 \\
+\end{align*}
+
+\begin{align}
+    f(x) &\coloneq \sin{x} + \cos{x} + \tan{x} \\
+    f'(x) &= \left( \sin{x} + \cos{x} + \tan{x} \right)' \\
+    &= \cos{x} -\sin{x} + \left( \frac{\sin{x}}{\cos{x}} \right)' \\
+    &= \cos{x} -\sin{x} + \frac{\sin{x}(\cos{x})' - (\sin{x})'\cos{x}}{\cos^2{x}} \\
+    &= \cos{x} -\sin{x} + \frac{\cos{x}(\sin{x})' - \sin{x}(\cos{x})'}{\cos^2{x}} \\
+    &= \cos{x} -\sin{x} + \frac{\cos{x}\cos{x} - \sin{x}(-\sin{x})}{\cos^2{x}} \\
+    &= \cos{x} -\sin{x} + \frac{\cos^2{x} + sin^2{x}}{\cos^2{x}} \\
+    &= \cos{x} -\sin{x} + \frac{1}{\cos^2{x}} \\
+    &= \cos{x} -\sin{x} + \sec^2{x} \\
+    f''(x) &= \left( \cos{x} -\sin{x} + \sec^2{x} \right)' \\ 
+    &= -\sin{x} - \cos{x} + 2\sec^2{x}\tan{x} \\
+    f'''(x) &= \left( -\sin{x} - \cos{x} + 2\sec^2{x}\tan{x} \right)' \\
+    &= -\cos{x} + \sin{x} + \left( 2\sec^2{x}\tan{x} \right)' \\
+    &= -\cos{x} + \sin{x} + 2\left( (\sec^2{x})'\tan{x} + \sec^2{x}(\tan{x})' \right) \\
+    &= -\cos{x} + \sin{x} + 4\sec^2{x}\tan^2{x} + 2\sec^4{x} \\
+\end{align}
+
+\begin{align}
+    f(x_0) &= \sin{x_0} + \cos{x_0} + \tan{x_0} \\
+    &= \sin{0} + \cos{0} + \tan{0} = 1 \\
+    f'(x_0) &= \cos{x_0} - \sin{x_0} + \sec^2{x_0} \\
+    &= \cos{0} - \sin{0} + \sec^2{0} \\ 
+    &= 1 - 0 + 1 = 2 \\
+    f''(x_0) &= -\sin{x_0} - \cos{x_0} + 2\sec^2{x_0}\tan{x_0} \\
+    &= - 0 - 1 2 \cdot 1 \cdot 0 = 0 \\
+    f'''(x_0) &= -\cos{x_0} + \sin{x_0} + 4\sec^2{x_0}\tan^2{x_0} + 2\sec^4{x_0} \\ 
+    &= -\cos{0} + \sin{0} + 4\sec^2{0}\tan^2{0} + 2\sec^4{0} \\ 
+    &= - 1 + 0 + 0 + 2 = 1 
+\end{align}
+
+Taylor's polynom of third degree for our function $f$ is 
+$$
+    P^3_T = 1 + 2x + 0x^2 + \frac{1}{6}x^3
+$$

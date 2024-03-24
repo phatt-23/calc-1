@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+
+\input{inputs/preamble}
+\input{inputs/macros}
+\includeonly{
+    sections/s1.tex,
+    sections/s2.tex,
+    sections/s3.tex,
+    sections/s4.tex
+}
+
+\title{\Huge{\textbf{Matematická analýza 1}} \\ 
+    \huge{Příprava na první zápočtový test} \\
+    \LARGE{Příkady - varianta $\lambda$}
+}
+\author{Phat Tran}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\setcounter{page}{0}
+\newpage
+\pagestyle{mycustomstyle} 
+
+\foreach \NUM in {1,2,3,4} {
+    \edef\temp {
+        \noexpand\include{sections/s\NUM.tex}
+    }
+    \temp    
+}
+
+\end{document}

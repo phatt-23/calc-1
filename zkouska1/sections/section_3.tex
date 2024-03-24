@@ -1,0 +1,45 @@
+To know where the asymptote for $-\infty$ lies on the graph
+get the limit of te function $f$.
+
+\begin{align}
+    \lim_{x \rightarrow -\infty}\left( x + 5 + \frac{3}{2x + 1} \right) \\
+    \lim_{x \rightarrow -\infty}\left( x + 5 \right) +
+    \lim_{x \rightarrow -\infty}\left( \frac{3}{2x + 1} \right)
+\end{align}
+
+The first term $\Lim{x \rightarrow -\infty}\left( x + 5 \right)$
+converges to $-\infty$ and the second   
+$\Lim{x \rightarrow -\infty}\left( \frac{3}{2x + 1} \right)$
+converges to~$0$, meaning the asymptote for the function $f$
+is $x + 5$.
+
+\begin{center}
+    \textit{The graph of function $f(x)$ and its asymptote $a(f(x))$}
+    \vspace{1cm}
+
+    \begin{tikzpicture}[scale=1.5]
+        \begin{axis}[
+            axis lines=middle,
+            samples=500,
+            restrict x to domain=-4:4,
+            restrict y to domain=-10:10,
+            xlabel=$x$,
+            ylabel=$y$,
+            xmin=-3.5,
+            xmax=3.5,
+            ymin=-4.5,
+            ymax=10.5,
+            xmajorgrids=true,
+            ymajorgrids=true,
+        ]
+        \foreach \COLOR/\EXPR/\LABEL/\POS/\LR in { 
+            Green / { x+5+(3/(2*x+1)) } / $f(x)$ / 0.2 / right,
+            Blue / {x+5} / $a(f(x))$ / 0.6 / below right
+        } 
+        {\edef\temp{
+            \noexpand\addplot[line width=2pt,color=\COLOR]{\EXPR}
+            node[\LR,pos=\POS]{\LABEL};
+        }\temp} 
+        \end{axis}
+    \end{tikzpicture}
+\end{center}

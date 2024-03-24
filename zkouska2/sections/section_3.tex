@@ -1,0 +1,24 @@
+Try direct placement.
+
+\begin{align}
+    &\lim_{x \rightarrow 0} \frac{\ln{(1 + x)} - x}{x\sin{x}} \\
+    &= \frac{\ln{(1 + 0)} - 0}{0\sin{0}} \\
+    &= \frac{\ln{1}}{0}
+\end{align}
+
+This will result in division by zero. $L'H\hat{o}pital's$ method.
+
+\begin{align}
+    &\lim_{x \rightarrow 0} \frac{\ln{(1 + x)} - x}{x\sin{x}} \\
+    &\rightarrow \lim_{x \rightarrow 0} \frac{ (\ln{(1 + x) } - x )'}{(x\sin{x})' } \\
+    &= \frac{ \frac{1}{(1 + x)} - 1}{ \sin{x} + x\cos{x} } \\
+    &= \frac{ \frac{1}{(1 + x)} - 1}{ \sin{x} + x\cos{x} } \\
+    &= \frac{( \frac{1}{(1 + x)} - 1 )'}{( \sin{x} + x\cos{x} )'} \\
+    &= \frac{( \frac{1}{(1 + x)} )'}{\cos{x} + \sin{x}} \\
+    &= \frac{\frac{1}{(1 + x)^2}}{\cos{x} + \sin{x}} \\
+    &= \frac{-\frac{1}{(1 + 0)^2}}{\cos{0} + \sin{0}} \\
+\end{align}
+
+$$ 
+    \lim_{x \rightarrow 0} \frac{\ln{(1 + x)} - x}{x\sin{x}} = -1
+$$

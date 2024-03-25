@@ -1,0 +1,12 @@
+# Fdb version 4
+["pdflatex"] 1711362439.94546 "/home/phatt/School/calc/test1-prep/sections/s8.tex" "s8.pdf" "s8" 1711362440.11461 2
+  "/home/phatt/School/calc/test1-prep/sections/s8.tex" 1711362439.81635 588 c53ee5c2517c87fd98d12dd2e56d0866 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1689984000 40900 887e0dc8cac988a9e9c574af364cf837 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710717819 6474265 efe70ddef16ac638dbd7517e14c4b041 ""
+  "s8.aux" 1711362429.7844 672 138f6007fe7ec3f84f874e40ff8c3b7b "pdflatex"
+  "s8.tex" 1711362439.81635 588 c53ee5c2517c87fd98d12dd2e56d0866 ""
+  (generated)
+  "s8.aux"
+  "s8.log"
+  "s8.pdf"
+  (rewritten before read)

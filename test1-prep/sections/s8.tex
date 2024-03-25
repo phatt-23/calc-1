@@ -1,0 +1,11 @@
+\qs{Dokažte následující tvrzení}{
+	\[ \forall n \in \mathbb{N}: \frac{1}{2^1} + \frac{2}{2^2} + \ldots + \frac{n}{2^n} = 2 - \frac{n + 2}{2^n} \]
+}
+
+\begin{align}
+	\sum_{k = 1}^{n}& \frac{n}{2^n} = 2 - \frac{n + 2}{2^n} \\
+	M(1) &= 2 - \frac{1 + 2}{2^1} = 2 - \frac{3}{2} = \frac{1}{2} \\
+	\exists m \in \mathbb{N}:\ M(m) &= 2 - \frac{m + 2}{2^m} \Rightarrow \exists m + 1 \in \mathbb{N}:\ \frac{(m + 1) + 2}{2^{m + 1}} \\
+	M(m + 1) &= 2 - \frac{(m + 1) + 2}{2^{m + 1}} \\
+	M(m + 1) &= \frac{2}{1} - \frac{m + 2}{2^m} + \frac{m + 1}{2^{m + 1}} \slash (2^m)(2^{m + 1}) \\
+\end{align}

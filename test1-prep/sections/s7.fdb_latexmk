@@ -1,0 +1,12 @@
+# Fdb version 4
+["pdflatex"] 1711360126.1597 "/home/phatt/School/calc/test1-prep/sections/s7.tex" "s7.pdf" "s7" 1711360126.32585 2
+  "/home/phatt/School/calc/test1-prep/sections/s7.tex" 1711360126.01479 323 960c6bd39460c27f0e0b24dda109e734 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1689984000 40900 887e0dc8cac988a9e9c574af364cf837 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710717819 6474265 efe70ddef16ac638dbd7517e14c4b041 ""
+  "s7.aux" 1711360086.324 666 72ba2bb228aa1ecdd82d2138ff81dbd6 "pdflatex"
+  "s7.tex" 1711360126.01479 323 960c6bd39460c27f0e0b24dda109e734 ""
+  (generated)
+  "s7.aux"
+  "s7.log"
+  "s7.pdf"
+  (rewritten before read)

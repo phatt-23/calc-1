@@ -1,0 +1,48 @@
+\begin{tcolorbox}
+Rozhodněte, která z následujicích tvrzení jsou pravdivá/nepravdivá.
+\begin{enumerate}[
+        label=(\alph*), 
+        noitemsep,
+        topsep=0pt,
+        parsep=2pt,
+        partopsep=0pt,
+        labelwidth=5cm,
+        align=right,
+        itemindent=1.2cm
+    ]
+	\item Jestliže funkce $f$ není v bodě $x_0$ spojitá, pak přímka $x= x_0$ je svislou asymptotou funkce $f$.
+	\item Každá periodická funkce je omezená.
+	\item Je-li $f'(1) = 0$ a $f''(1) = 5$, má funkce $f$ v bodě $x = 1$ lokální extrém.
+	\item Na intervalu $(0, +\infty)$ platí $\int \frac{1}{x} \diff{x} = 2021 + \ln(2022x)$.
+	\item Existuje funkce $f$ spojitá na intervalu $I$, která na $I$ není omezená.
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=1. otázka]
+	Ano. Body po $x$-ové ose se k tomuto bodu $x_0$ nekonečně přibližují.
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=2. otázka]
+	Ne. Třeba funkce $f(x) \coloneq \tan{x}$ je periodická, ale není zhora ani zdora omezená.
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=3. otázka]
+	Ano. Její první derivace je nulová a druhá derivace není nulová. Pokud by byla druhá derivace nulová. znamenalo by to, že je v bodě $x_0$ inflexní bod.
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=4. otázka]
+	\begin{align}
+		F(x) &= 2021 + \ln{2022x} \\
+		f(x) &= \frac{1}{x} \\
+		F'(x) = (2021 + \ln(2022x))' &= \frac{1}{2022x}2022 = \frac{1}{x} = f(x) 
+	\end{align}
+	Platí. Absolutní hodnotu u $\ln$ můžeme vynechat protože se zabýváme jen kladnými $x$ ($\mathbb{R}_0$).
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=5. otázka]
+	Ano, pokud je interval $I$ otevřený, můžou hodnoty v mezních bodech nabývat $\pm\infty$, tím jsou neomezené.
+\end{tcolorbox}

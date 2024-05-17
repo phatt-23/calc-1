@@ -8,8 +8,18 @@ help me here.
 \end{center}
 
 The \textit{per partes} method is derived 
-from the product rule in derivation. 
+from the product rule in derivation ($(uv)' = u'v + uv'$).
 
-\begin{align*}
-    (uv)' &= u'v + uv' \\
-\end{align*}
+\[
+\begin{aligned}
+    \text{Výběr funkce $f$:} & \quad f(x) = (2x + 3) \rightarrow f'(x) = 2 \\
+    \text{Výběr funkce $g$:} & \quad g'(x) = e^x \rightarrow g(x) = e^x  \\
+\end{aligned}
+\]
+
+\begin{align}
+    \int &(2x + 3)e^x \diff{x} =\\
+    &= (2x+3)e^x - 2\int e^x \diff{x} =\\
+    &= (2x+3)e^x - 2e^x = \\
+    &= e^x(2x + 1) + C 
+\end{align}

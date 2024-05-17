@@ -1,2 +1,0 @@
-
-** (org.pwmt.zathura:19617): CRITICAL **: 10:49:37.228: sc_bisect: assertion 'zathura->document != NULL' failed

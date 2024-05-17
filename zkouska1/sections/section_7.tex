@@ -6,8 +6,29 @@
     To znamená, že funkce musí být v tomto intervalu $I$ omezená.
 \end{tcolorbox}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[title=2. otázka]
     Není jednoznačné, že se v bodě $x = 5$ nachází lokální minimum.
-    Tvrzení je příliš obecné.   
+    Tvrzení je příliš obecné. Může se tam nacházet inflexní bod.
 \end{tcolorbox}
 
+\begin{tcolorbox}[title=3. otázka]
+    Žádná hodnota v jakémkoli bodě derivace se nemůže \emph{rovant} $\pm \infty$, pouze se k přibližovat (hodnota v jinak nedefinovaném bodě $x$ diverguje\footnote{Divergence generally means two things are moving apart while convergence implies that two forces are moving together. \href{https://www.investopedia.com/ask/answers/121714/what-are-differences-between-divergence-and-convergence.asp}{zdroj} } k nekonečnu). Pokud se otázka bere ve smyslu, že se hodnota derivace k nekonečnu diverguje, tak potom je odpověd ano.
+    Platí to např. u funkce $f(x) = \sqrt{x}$. Její derivace $f'(x) = (x^{\frac{1}{2}})' = \frac{1}{2}x^{-\frac{1}{2}} = \frac{1}{2\sqrt{x}}$. V bodě $x = 0$ je funkce $f$ definována a spojitá. Ve funkci $f'(0)$ bod $x = 0$ není definován, $\lim_{x \rightarrow 0} f'(x)$ konverguje k nekonečnu.
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=4. otázka]
+    Neplatí. 
+    \begin{align}
+        \int& \frac{1}{2x}\diff{x} = \Big| 
+        t = 2x \, , \,\, \diff{t} = 2\diff{x} \Big| = \\
+        = \int& \frac{1}{t}\frac{1}{2}\diff{t}
+        = \frac{1}{2}\int \frac{1}{t}\diff{t} = 
+        \frac{1}{2}\ln{|t|} = \frac{1}{2}\ln{|2x|}
+    \end{align}
+    V intervalu $(0, +\infty)$ platí $\frac{1}{2}\ln{(2x)}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=5. otázka]
+    Ano, jsou jimi funkce, které mají horizontální asymptotu. Např. funkce $f(x) = \arctan{x}$. Ten má dvě horizontální asymptoty $a_0 = 0x + \frac{\pi}{2}$ a $a_1 = 0x - \frac{\pi}{2}$.
+\end{tcolorbox}
